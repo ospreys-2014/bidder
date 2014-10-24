@@ -4,7 +4,7 @@ class CreateBids < ActiveRecord::Migration
   def change
     create_table :bids do |t|
       t.belongs_to :events
-      t.belongs_to :students
+      t.belongs_to :account
       t.integer :bid_value
       t.timestamps
     end

@@ -15,10 +15,11 @@ require_relative '../app/models/event'
 end
 
 10.times do
-  Event.create(event_date: Faker::Date.forward(30),
+  Event.create(
+    event_date: Faker::Date.forward(30),
     venue: Faker::Company.name,
-    name: Faker::Lorem.words(3),
-    artist: Faker::Lorem.words(2),
+    name: Faker::Lorem.words(3).join(' '),
+    artist: Faker::Lorem.words(2).join(' '),
     tickets_available: 100)
 end
 
