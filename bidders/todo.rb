@@ -1,3 +1,8 @@
-require_relative 'config/application'
+class Ticket
+  def winners
+    Event.first.bids.select { |bid| bid > 20 }
+  end
+end
 
-puts "Put your application code in #{File.expand_path(__FILE__)}"
+
+p Ticket.new.winners
